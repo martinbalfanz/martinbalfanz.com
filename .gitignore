@@ -1,5 +1,6 @@
 *~
 *.css
-.sass-cache
+.sass-cache/
 #*
 .#*
+components/

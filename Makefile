@@ -5,6 +5,9 @@ endif
 
 DATE=$(shell date)
 
+default:
+	@echo "make deploy -- deploy to gh-pages"
+
 deploy:
 ifneq ("${CURRENT_BRANCH}", "gh-pages")
 	git branch -D gh-pages
