@@ -12,6 +12,7 @@ deploy:
 ifneq ("${CURRENT_BRANCH}", "gh-pages")
 	git branch -D gh-pages
 	git checkout -b gh-pages
+	bower install
 	sass --scss --style compressed --quiet stylesheets/base.scss stylesheets/base.css
 	rm stylesheets/*.scss
 	rm Procfile
