@@ -1,6 +1,4 @@
-*~
-*.css
-.sass-cache/
 #*
-.#*
-components/
+*~
+*.scss
+.sass-cache
