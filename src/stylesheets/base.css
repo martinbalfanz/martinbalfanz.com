@@ -1,3 +1,5 @@
+$mobile-bp: 414px;
+
 * {
     box-sizing: border-box;
 }
@@ -17,15 +19,37 @@ body {
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 400px) {
-        background-image: none;
+    @media screen and (max-width: $mobile-bp) {
+        background-size: 120%;
+        background-position: 140% -5%;
+    }
+
+    &:after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: #000;;
+        position: absolute;
+        z-index: 0;
+        opacity: 0;
+
+        @at-root {
+            @keyframes fadeout {
+                from { opacity: 1; }
+                to   { opacity: 0; }
+            }
+        }
+
+        animation: fadeout 3s;
+        animation-timing-function: ease-out;
     }
 }
 
 #content {
     padding: 0 4em;
+    z-index: 1;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: $mobile-bp) {
         padding: 0 2em;
     }
 }
