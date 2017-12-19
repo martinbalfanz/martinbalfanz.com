@@ -1,6 +1,7 @@
 *~
-*.css
-.sass-cache/
 #*
 .#*
-components/
+.tern-port
+.cache/
+/node_modules/
+/dist/

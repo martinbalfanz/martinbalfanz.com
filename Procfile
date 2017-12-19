@@ -1,2 +1,2 @@
-sass: sass --watch stylesheets:stylesheets
-tracegl: tracegl.js .
+bundle: yarn watch
+devd: devd -l ./dist/
